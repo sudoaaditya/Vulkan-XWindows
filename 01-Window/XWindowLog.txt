@@ -1,0 +1,27 @@
+File Created Successfully..
+main(): X Display Opened Successfully!..
+main(): XVisualInfo Obtained Successfully with 336 FBConfigs!..
+main(): Window Created Successfully!..
+main(): Initialization Successful!..
+main(): Window Restored!.
+main(): Window Restored!.
+main(): Window Restored!.
+main(): Window Restored!.
+main(): Window Restored!.
+main(): Window Restored!.
+main(): Window Restored!.
+main(): Window Restored!.
+main(): Window Restored!.
+main(): Window Restored!.
+main(): Window Restored!.
+main(): Window Restored!.
+main(): Window Restored!.
+main(): Window Restored!.
+main(): Window Restored!.
+main(): Window Restored!.
+main(): Window Restored!.
+main(): Window Restored!.
+main(): Window Restored!.
+main(): Window Restored!.
+main(): Window Restored!.
+main(): Window Restored!.
