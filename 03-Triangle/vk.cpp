@@ -10,8 +10,6 @@
 #include <X11/keysym.h> // for KeySym
 #include <X11/Xatom.h> // for XA_ATOM constant
 
-#include "vk.h"
-
 // vulkan related header files
 #define VK_USE_PLATFORM_XLIB_KHR
 #include<vulkan/vulkan.h>
@@ -173,7 +171,6 @@ int main(int argc, char *argv[]) {
     void uninitialize(void);
     void update(void);
     VkResult resize(int, int);
-    VkResult vkResult = VK_SUCCESS;
 
     // Variables
     XVisualInfo xVisualInfo;
@@ -188,6 +185,8 @@ int main(int argc, char *argv[]) {
     KeySym keySym;
     char keys[26];
     Bool bDone = False;
+
+    VkResult vkResult = VK_SUCCESS;
 
     // File I/O
     fptr = fopen("_VulkanXWindowsLog.txt", "w");
