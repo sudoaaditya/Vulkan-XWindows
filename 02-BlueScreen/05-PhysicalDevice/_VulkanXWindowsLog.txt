@@ -1,0 +1,51 @@
+File Created Successfully..
+main(): X Display Opened Successfully!..
+main(): XVisualInfo Obtained Successfully with 336 FBConfigs!..
+main(): Window Created Successfully!..
+fillInstanceExtensionNames(): vkEnumerateInstanceExtensionProperties() First Call Successful!.
+fillInstanceExtensionNames(): vkEnumerateInstanceExtensionProperties() Second Call Successful!.
+fillInstanceExtensionNames(): Vulkan Extension Name = VK_KHR_device_group_creation 
+fillInstanceExtensionNames(): Vulkan Extension Name = VK_KHR_display 
+fillInstanceExtensionNames(): Vulkan Extension Name = VK_KHR_external_fence_capabilities 
+fillInstanceExtensionNames(): Vulkan Extension Name = VK_KHR_external_memory_capabilities 
+fillInstanceExtensionNames(): Vulkan Extension Name = VK_KHR_external_semaphore_capabilities 
+fillInstanceExtensionNames(): Vulkan Extension Name = VK_KHR_get_display_properties2 
+fillInstanceExtensionNames(): Vulkan Extension Name = VK_KHR_get_physical_device_properties2 
+fillInstanceExtensionNames(): Vulkan Extension Name = VK_KHR_get_surface_capabilities2 
+fillInstanceExtensionNames(): Vulkan Extension Name = VK_KHR_surface 
+fillInstanceExtensionNames(): Vulkan Extension Name = VK_KHR_surface_protected_capabilities 
+fillInstanceExtensionNames(): Vulkan Extension Name = VK_KHR_wayland_surface 
+fillInstanceExtensionNames(): Vulkan Extension Name = VK_KHR_xcb_surface 
+fillInstanceExtensionNames(): Vulkan Extension Name = VK_KHR_xlib_surface 
+fillInstanceExtensionNames(): Vulkan Extension Name = VK_EXT_acquire_drm_display 
+fillInstanceExtensionNames(): Vulkan Extension Name = VK_EXT_acquire_xlib_display 
+fillInstanceExtensionNames(): Vulkan Extension Name = VK_EXT_debug_report 
+fillInstanceExtensionNames(): Vulkan Extension Name = VK_EXT_debug_utils 
+fillInstanceExtensionNames(): Vulkan Extension Name = VK_EXT_direct_mode_display 
+fillInstanceExtensionNames(): Vulkan Extension Name = VK_EXT_display_surface_counter 
+fillInstanceExtensionNames(): Vulkan Extension Name = VK_EXT_headless_surface 
+fillInstanceExtensionNames(): Vulkan Extension Name = VK_EXT_surface_maintenance1 
+fillInstanceExtensionNames(): Vulkan Extension Name = VK_EXT_swapchain_colorspace 
+fillInstanceExtensionNames(): Vulkan Extension Name = VK_KHR_portability_enumeration 
+fillInstanceExtensionNames(): Vulkan Extension Name = VK_LUNARG_direct_driver_loading 
+fillInstanceExtensionNames(): VK_KHR_SURFACE_EXTENSION_NAME Found!.
+fillInstanceExtensionNames(): VK_KHR_WIN32_SURFACE_EXTENSION_NAME Found!.
+fillInstanceExtensionNames(): Enabled Vulkan Instance Extension Name = VK_KHR_surface 
+fillInstanceExtensionNames(): Enabled Vulkan Instance Extension Name = VK_KHR_xlib_surface 
+createVulkanInstance(): fillInstanceExtensionNames() Successful!.
+createVulkanInstance(): vkCreateInstance() Successful!.
+
+initialize(): createVulkanInstance() Successful!.
+getSupportedSurface(): vkCreateXlibSurfaceKHR() Successful!.
+initialize(): getSupportedSurface() Successful!.
+getPhysicalDevice(): vkEnumeratePhysicalDevices() First Call Successful!.
+getPhysicalDevice(): vkEnumeratePhysicalDevices() Second Call Successful!.
+getPhysicalDevice(): freed isQueueSurfaceSupported_array!.
+getPhysicalDevice(): freed vkQueueFamilyProperties_array!.
+getPhysicalDevice(): freed vkPhysicalDevice_array!.
+getPhysicalDevice(): Successful to get required graphics enabled physical device!.
+getPhysicalDevice(): Selected Physical Device Supports Tessellation Shader!.
+getPhysicalDevice(): Selected Physical Device Supports Geometry Shader!.
+initialize(): getPhysicalDevice() Successful!.
+
+main(): Initialization Successful!..
