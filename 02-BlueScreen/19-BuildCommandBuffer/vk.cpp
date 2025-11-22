@@ -308,7 +308,6 @@ int main(int argc, char *argv[]) {
         }
     }
 
-
     uninitialize();
 
     return(0);
@@ -722,13 +721,28 @@ void uninitialize(void) {
         swapchainImage_array = NULL;
     }
 
+
+    // Destroy Vulkan Swapchain
+    if(vkSwapchainKHR) {
+        vkDestroySwapchainKHR(vkDevice, vkSwapchainKHR, NULL);
+        vkSwapchainKHR = VK_NULL_HANDLE;
+    }
+    
+    // No need to destroy device queue
+
+    // Destroy Vulkan Device
+    if(vkDevice) {
+        vkDestroyDevice(vkDevice, NULL);
+        vkDevice = VK_NULL_HANDLE;
+    }
+    
     //No need to destroy selected physical device!
 
     // destroy surface
     if(vkSurfaceKHR) {
         vkDestroySurfaceKHR(vkInstance, vkSurfaceKHR, NULL);
         vkSurfaceKHR = VK_NULL_HANDLE;
-		fprintf(fptr,"\nuninitialize(): vkDestroySurfaceKHR() Succeed\n");
+		fprintf(fptr,"uninitialize(): vkDestroySurfaceKHR() Succeed\n");
     }
 
     // destroy vkInstance
@@ -736,14 +750,13 @@ void uninitialize(void) {
         vkDestroyInstance(vkInstance, NULL);
         vkInstance = VK_NULL_HANDLE;
 		fprintf(fptr,"uninitialize(): vkDestroyInstance() Succeed\n");
-
     }
 
-    if(fptr) {
-        fprintf(fptr, "uninitialize(): File Closed Successfully..\n");
+	if(fptr){
+		fprintf(fptr,"uninitialize(): File Closed Successfully..\n");
         fclose(fptr);
-        fptr = NULL;
-    }
+		fptr = NULL;
+	}
 }
 
 

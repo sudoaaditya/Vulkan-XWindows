@@ -34,3 +34,5 @@ fillInstanceExtensionNames(): Enabled Vulkan Instance Extension Name = VK_KHR_su
 fillInstanceExtensionNames(): Enabled Vulkan Instance Extension Name = VK_KHR_xlib_surface 
 initialize(): fillInstanceExtensionNames() Successful!.
 main(): Initialization Successful!..
+
+uninitialize(): File Closed Successfully..

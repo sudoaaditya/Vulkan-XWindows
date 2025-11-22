@@ -254,3 +254,11 @@ createVulkanDevice(): vkCreateDevice() Successful!.
 initialize(): createVulkanDevice() Successful!.
 
 main(): Initialization Successful!..
+
+uninitialize(): vkDeviceWaitIdle is done!
+
+uninitialize(): vkDestroySurfaceKHR() Succeed
+
+uninitialize(): vkDestroyInstance() Succeed
+
+uninitialize(): File Closed Successfully..

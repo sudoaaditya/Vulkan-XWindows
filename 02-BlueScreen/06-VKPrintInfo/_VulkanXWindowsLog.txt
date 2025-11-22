@@ -75,3 +75,9 @@ printVKInfo(): freed vkPhysicalDevice_array!.
 initialize(): printVKInfo() Successful!.
 
 main(): Initialization Successful!..
+
+uninitialize(): vkDestroySurfaceKHR() Succeed
+
+uninitialize(): vkDestroyInstance() Succeed
+
+uninitialize(): File Closed Successfully..

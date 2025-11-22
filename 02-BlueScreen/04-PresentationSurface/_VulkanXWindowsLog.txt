@@ -39,3 +39,9 @@ initialize(): createVulkanInstance() Successful!.
 getSupportedSurface(): vkCreateXlibSurfaceKHR() Successful!.
 initialize(): getSupportedSurface() Successful!.
 main(): Initialization Successful!..
+
+uninitialize(): vkDestroySurfaceKHR() Succeed
+
+uninitialize(): vkDestroyInstance() Succeed
+
+uninitialize(): File Closed Successfully..

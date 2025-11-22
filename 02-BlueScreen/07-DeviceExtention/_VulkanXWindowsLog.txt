@@ -252,3 +252,9 @@ fillDeviceExtensionNames(): Enabled Vulkan Device Extension Name = VK_KHR_swapch
 initialize(): fillDeviceExtensionNames() Successful!.
 
 main(): Initialization Successful!..
+
+uninitialize(): vkDestroySurfaceKHR() Succeed
+
+uninitialize(): vkDestroyInstance() Succeed
+
+uninitialize(): File Closed Successfully..

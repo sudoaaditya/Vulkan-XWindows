@@ -306,3 +306,33 @@ initialize(): createFences() Successful!.
 
 
 main(): Initialization Successful!..
+
+uninitialize(): vkDeviceWaitIdle is done!
+uninitialize(): vkDestroyFence() Succeed for {0}!.
+uninitialize(): vkDestroyFence() Succeed for {1}!.
+uninitialize(): vkDestroyFence() Succeed for {2}!.
+uninitialize(): vkDestroyFence() Succeed for {3}!.
+uninitialize(): freed vkFence_array!.
+uninitialize(): vkDestroySemaphore() for Render Complete Succeed!
+uninitialize(): vkDestroySemaphore() for Back Buffer Succeed!
+uninitialize(): vkDestroyFramebuffer() Succeed for {0}!.
+uninitialize(): vkDestroyFramebuffer() Succeed for {1}!.
+uninitialize(): vkDestroyFramebuffer() Succeed for {2}!.
+uninitialize(): vkDestroyFramebuffer() Succeed for {3}!.
+uninitialize(): freed vkFramebuffer_array!.
+uninitialize(): vkDestroyRenderPass() Succeed!
+uninitialize(): vkFreeCommandBuffers() Succeed for {0}
+uninitialize(): vkFreeCommandBuffers() Succeed for {1}
+uninitialize(): vkFreeCommandBuffers() Succeed for {2}
+uninitialize(): vkFreeCommandBuffers() Succeed for {3}
+uninitialize(): freed vkCommandBuffer_array!.
+uninitialize(): vkDestroyCommandPool Successful!.
+uninitialize(): vkDestroyImageView() Succeed for {0}
+uninitialize(): vkDestroyImageView() Succeed for {1}
+uninitialize(): vkDestroyImageView() Succeed for {2}
+uninitialize(): vkDestroyImageView() Succeed for {3}
+uninitialize(): freed swapchainImageView_array!.
+uninitialize(): freed swapchainImage_array!.
+uninitialize(): vkDestroySurfaceKHR() Succeed
+uninitialize(): vkDestroyInstance() Succeed
+uninitialize(): File Closed Successfully..

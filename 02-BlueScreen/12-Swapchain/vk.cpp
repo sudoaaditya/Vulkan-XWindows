@@ -283,6 +283,7 @@ int main(int argc, char *argv[]) {
         }
     }
 
+    uninitialize();
 
     return(0);
 }
@@ -495,37 +496,46 @@ void uninitialize(void) {
 
     // Vulkan Uninitialization Code
 
+    if(vkDevice) {
+        vkDeviceWaitIdle(vkDevice); // this basically waits on til all the operations have done the device and then this function call returns
+        fprintf(fptr, "\nuninitialize(): vkDeviceWaitIdle is done!\n");
+    }
+
+    // Destroy Vulkan Swapchain
+    if(vkSwapchainKHR) {
+        vkDestroySwapchainKHR(vkDevice, vkSwapchainKHR, NULL);
+        vkSwapchainKHR = VK_NULL_HANDLE;
+    }
+    
+    // No need to destroy device queue
+
     // Destroy Vulkan Device
     if(vkDevice) {
-        vkDeviceWaitIdle(vkDevice); // this basically waits on til all \
-                the operations have done the device and then this function call returns
-        fprintf(fptr, "\nuninitialize(): vkDeviceWaitIdle is done!\n");
         vkDestroyDevice(vkDevice, NULL);
         vkDevice = VK_NULL_HANDLE;
     }
-
+    
     //No need to destroy selected physical device!
 
     // destroy surface
     if(vkSurfaceKHR) {
         vkDestroySurfaceKHR(vkInstance, vkSurfaceKHR, NULL);
         vkSurfaceKHR = VK_NULL_HANDLE;
-		fprintf(fptr,"\nuninitialize(): vkDestroySurfaceKHR() Succeed\n");
+		fprintf(fptr,"uninitialize(): vkDestroySurfaceKHR() Succeed\n");
     }
 
     // destroy vkInstance
     if(vkInstance) {
         vkDestroyInstance(vkInstance, NULL);
         vkInstance = VK_NULL_HANDLE;
-		fprintf(fptr,"\nuninitialize(): vkDestroyInstance() Succeed\n");
-
+		fprintf(fptr,"uninitialize(): vkDestroyInstance() Succeed\n");
     }
 
-    if(fptr) {
-        fprintf(fptr, "\nuninitialize(): File Closed Successfully..\n");
+	if(fptr){
+		fprintf(fptr,"uninitialize(): File Closed Successfully..\n");
         fclose(fptr);
-        fptr = NULL;
-    }
+		fptr = NULL;
+	}
 }
 
 

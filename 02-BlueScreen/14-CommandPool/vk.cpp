@@ -291,6 +291,7 @@ int main(int argc, char *argv[]) {
         }
     }
 
+    uninitialize();
 
     return(0);
 }
@@ -524,37 +525,89 @@ void uninitialize(void) {
 
     // Vulkan Uninitialization Code
 
+    // wait til vkDevice is idle
+    if(vkDevice) {
+        vkDeviceWaitIdle(vkDevice); // this basically waits on til all the operations are done using the device and then this function call returns
+        fprintf(fptr, "\nuninitialize(): vkDeviceWaitIdle is done!\n");
+    }
+
+    // Destroy the command pool
+    if(vkCommandPool) {
+        vkDestroyCommandPool(vkDevice, vkCommandPool, NULL);
+        fprintf(fptr, "uninitialize(): vkDestroyCommandPool Successful!.\n");
+        vkCommandPool = VK_NULL_HANDLE;
+    }
+
+    // Destroy Vulkan Swapchain Image Views
+    if(swapchainImageView_array) {
+        for(uint32_t i = 0; i < swapchainImageCount; i++) {
+            if(swapchainImageView_array[i]) {
+                vkDestroyImageView(vkDevice, swapchainImageView_array[i], NULL);
+                fprintf(fptr, "uninitialize(): vkDestroyImageView() Succeed for {%d}\n", i);
+                swapchainImageView_array[i] = VK_NULL_HANDLE;
+            }
+        }
+    }
+
+    if(swapchainImageView_array) {
+        free(swapchainImageView_array);
+        fprintf(fptr, "uninitialize(): freed swapchainImageView_array!.\n");
+        swapchainImageView_array = NULL;
+    }
+
+    /* // Destroy vulkan Images
+    if(swapchainImage_array) {
+        for(uint32_t i = 0; i < swapchainImageCount; i++) {
+            if(swapchainImage_array[i]) {
+                vkDestroyImage(vkDevice, swapchainImage_array[i], NULL);
+                fprintf(fptr, "uninitialize(): vkDestroyImage() Succeed for {%d}\n", i);
+                swapchainImage_array[i] = VK_NULL_HANDLE;
+            }
+        }
+    } */
+
+    if(swapchainImage_array) {
+        free(swapchainImage_array);
+        fprintf(fptr, "uninitialize(): freed swapchainImage_array!.\n");
+        swapchainImage_array = NULL;
+    }
+
+
+    // Destroy Vulkan Swapchain
+    if(vkSwapchainKHR) {
+        vkDestroySwapchainKHR(vkDevice, vkSwapchainKHR, NULL);
+        vkSwapchainKHR = VK_NULL_HANDLE;
+    }
+    
+    // No need to destroy device queue
+
     // Destroy Vulkan Device
     if(vkDevice) {
-        vkDeviceWaitIdle(vkDevice); // this basically waits on til all \
-                the operations have done the device and then this function call returns
-        fprintf(fptr, "\nuninitialize(): vkDeviceWaitIdle is done!\n");
         vkDestroyDevice(vkDevice, NULL);
         vkDevice = VK_NULL_HANDLE;
     }
-
+    
     //No need to destroy selected physical device!
 
     // destroy surface
     if(vkSurfaceKHR) {
         vkDestroySurfaceKHR(vkInstance, vkSurfaceKHR, NULL);
         vkSurfaceKHR = VK_NULL_HANDLE;
-		fprintf(fptr,"\nuninitialize(): vkDestroySurfaceKHR() Succeed\n");
+		fprintf(fptr,"uninitialize(): vkDestroySurfaceKHR() Succeed\n");
     }
 
     // destroy vkInstance
     if(vkInstance) {
         vkDestroyInstance(vkInstance, NULL);
         vkInstance = VK_NULL_HANDLE;
-		fprintf(fptr,"\nuninitialize(): vkDestroyInstance() Succeed\n");
-
+		fprintf(fptr,"uninitialize(): vkDestroyInstance() Succeed\n");
     }
 
-    if(fptr) {
-        fprintf(fptr, "\nuninitialize(): File Closed Successfully..\n");
+	if(fptr){
+		fprintf(fptr,"uninitialize(): File Closed Successfully..\n");
         fclose(fptr);
-        fptr = NULL;
-    }
+		fptr = NULL;
+	}
 }
 
 

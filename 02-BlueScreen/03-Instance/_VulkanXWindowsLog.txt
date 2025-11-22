@@ -37,3 +37,7 @@ createVulkanInstance(): vkCreateInstance() Successful!.
 
 initialize(): createVulkanInstance() Successful!.
 main(): Initialization Successful!..
+
+uninitialize(): vkDestroyInstance() Succeed
+
+uninitialize(): File Closed Successfully..

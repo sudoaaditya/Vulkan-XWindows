@@ -49,3 +49,9 @@ getPhysicalDevice(): Selected Physical Device Supports Geometry Shader!.
 initialize(): getPhysicalDevice() Successful!.
 
 main(): Initialization Successful!..
+
+uninitialize(): vkDestroySurfaceKHR() Succeed
+
+uninitialize(): vkDestroyInstance() Succeed
+
+uninitialize(): File Closed Successfully..

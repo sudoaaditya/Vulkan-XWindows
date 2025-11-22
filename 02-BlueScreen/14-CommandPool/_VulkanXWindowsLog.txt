@@ -281,3 +281,15 @@ initialize(): createCommandPool() Successful!.
 
 
 main(): Initialization Successful!..
+
+uninitialize(): vkDeviceWaitIdle is done!
+uninitialize(): vkDestroyCommandPool Successful!.
+uninitialize(): vkDestroyImageView() Succeed for {0}
+uninitialize(): vkDestroyImageView() Succeed for {1}
+uninitialize(): vkDestroyImageView() Succeed for {2}
+uninitialize(): vkDestroyImageView() Succeed for {3}
+uninitialize(): freed swapchainImageView_array!.
+uninitialize(): freed swapchainImage_array!.
+uninitialize(): vkDestroySurfaceKHR() Succeed
+uninitialize(): vkDestroyInstance() Succeed
+uninitialize(): File Closed Successfully..
