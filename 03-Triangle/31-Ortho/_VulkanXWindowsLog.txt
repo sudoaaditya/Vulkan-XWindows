@@ -479,51 +479,6 @@ buildCommandBuffers(): vkBeginCommandBuffer() Successful for {3}!.
 buildCommandBuffers(): vkEndCommandBuffer() Successful for {3}!.
 
 
-getPhysicalDeviceSurfaceFormatAndColorSpace(): vkGetPhysicalDeviceSurfaceFormatsKHR() first Call Successful!. [Found 2 Formats]
-getPhysicalDeviceSurfaceFormatAndColorSpace(): vkGetPhysicalDeviceSurfaceFormatsKHR() Second Call Successful!.
-getPhysicalDeviceSurfaceFormatAndColorSpace(): vkSurfaceFormatKHR_array freed.
-createSwapchain(): getPhysicalDeviceSurfaceFormatAndColorSpace() Successful!.
-createSwapchain(): vkGetPhysicalDeviceSurfaceCapabilitiesKHR() Successful!.
-createSwapchain(): desiredNumberOfSwapchainImages is : 3, [Min: 3, Max: 0]
-createSwapchain(): Swapchain Image Width : 800 X Height : 600
-getPhysicalDeviceSurfacePresentMode(): vkGetPhysicalDeviceSurfacePresentModesKHR() first Call Successful!. [Found 4 Present Modes]
-getPhysicalDeviceSurfacePresentMode(): vkGetPhysicalDeviceSurfacePresentModesKHR() Second Call Successful!.
-getPhysicalDeviceSurfacePresentMode(): VK_PRESENT_MODE_MAILBOX_KHR Present Mode found!.
-getPhysicalDeviceSurfacePresentMode(): vkPresentModeKHR_array freed.
-createSwapchain(): getPhysicalDeviceSurfacePresentMode() Successful!.
-createSwapchain(): vkCreateSwapchainKHR() Successful!.
-createSwapchainImagesAndImageViews(): vkGetSwapchainImagesKHR() Successful!. : Swapchain Image Count : [4]
-createSwapchainImagesAndImageViews(): vkGetSwapchainImagesKHR() Second Call Successful!.
-createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for {0}!.
-createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for {1}!.
-createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for {2}!.
-createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for {3}!.
-createRenderPass(): vkCreateRenderPass() Successful!.
-createPipelineLayout(): vkCreatePipelineLayout() Successful!.
-createPipeline(): vkCreatePipelineCache() Successful!.
-createPipeline(): vkCreateGraphicsPipelines() Successful!.
-createFramebuffers(): vkCreateFramebuffer() Successful for {0}!.
-createFramebuffers(): vkCreateFramebuffer() Successful for {1}!.
-createFramebuffers(): vkCreateFramebuffer() Successful for {2}!.
-createFramebuffers(): vkCreateFramebuffer() Successful for {3}!.
-createCommandBuffers(): vkAllocateCommandBuffers() Successful for {0}!.
-createCommandBuffers(): vkAllocateCommandBuffers() Successful for {1}!.
-createCommandBuffers(): vkAllocateCommandBuffers() Successful for {2}!.
-createCommandBuffers(): vkAllocateCommandBuffers() Successful for {3}!.
-buildCommandBuffers(): vkResetCommandBuffer() Successful for {0}!.
-buildCommandBuffers(): vkBeginCommandBuffer() Successful for {0}!.
-buildCommandBuffers(): vkEndCommandBuffer() Successful for {0}!.
-buildCommandBuffers(): vkResetCommandBuffer() Successful for {1}!.
-buildCommandBuffers(): vkBeginCommandBuffer() Successful for {1}!.
-buildCommandBuffers(): vkEndCommandBuffer() Successful for {1}!.
-buildCommandBuffers(): vkResetCommandBuffer() Successful for {2}!.
-buildCommandBuffers(): vkBeginCommandBuffer() Successful for {2}!.
-buildCommandBuffers(): vkEndCommandBuffer() Successful for {2}!.
-buildCommandBuffers(): vkResetCommandBuffer() Successful for {3}!.
-buildCommandBuffers(): vkBeginCommandBuffer() Successful for {3}!.
-buildCommandBuffers(): vkEndCommandBuffer() Successful for {3}!.
-
-
 
 uninitialize(): vkDeviceWaitIdle is done!
 uninitialize(): vkDestroyFence() Succeed for {0}!.

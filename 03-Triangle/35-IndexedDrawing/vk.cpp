@@ -26,7 +26,7 @@
 #define _ARRAYSIZE(array) (sizeof(array) / sizeof(array[0]))
 
 // Global Variables
-const char* gpszAppName = "AMK_VulkanXWindowsApp : Prespective Triangle - Corrected Y - Shader Way";
+const char* gpszAppName = "AMK_VulkanXWindowsApp : Prespective Triangle - Indexed Drawing";
 
 Display *gpDisplay = NULL;
 XVisualInfo *gpXVisualInfo = NULL;

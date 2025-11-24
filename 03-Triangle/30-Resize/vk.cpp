@@ -26,7 +26,7 @@
 #define _ARRAYSIZE(array) (sizeof(array) / sizeof(array[0]))
 
 // Global Variables
-const char* gpszAppName = "AMK_VulkanXWindowsApp : Triangle Final Render";
+const char* gpszAppName = "AMK_VulkanXWindowsApp : Resize";
 
 Display *gpDisplay = NULL;
 XVisualInfo *gpXVisualInfo = NULL;
