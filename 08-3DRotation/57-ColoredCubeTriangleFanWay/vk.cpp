@@ -1370,7 +1370,7 @@ void uninitialize(void) {
 
 void update(void) {
 
-    angle += 0.005f;
+    angle += 0.05f;
     if(angle >= 360.0f) {
         angle = 0.0f;
     }
@@ -2597,94 +2597,79 @@ VkResult createVertexBuffer(void) {
 
     // Step 1
     float cube_position[] = {
-        // front
-        1.0f,  1.0f,  1.0f, // top-right of front
-        -1.0f,  1.0f,  1.0f, // top-left of front
-
-        -1.0f, -1.0f,  1.0f, // bottom-left of front
-        1.0f, -1.0f,  1.0f, // bottom-right of front
-
+       // front
+		 1.0f,  1.0f,  1.0f, // top-right of front
+		-1.0f,  1.0f,  1.0f, // top-left of front
+		-1.0f, -1.0f,  1.0f, // bottom-left of front
+		 1.0f, -1.0f,  1.0f, // bottom-right of front
 
         // right
         1.0f,  1.0f, -1.0f, // top-right of right
         1.0f,  1.0f,  1.0f, // top-left of right
-        
         1.0f, -1.0f,  1.0f, // bottom-left of right
         1.0f, -1.0f, -1.0f, // bottom-right of right
 
         // back
         1.0f,  1.0f, -1.0f, // top-right of back
         -1.0f,  1.0f, -1.0f, // top-left of back
-
         -1.0f, -1.0f, -1.0f, // bottom-left of back
         1.0f, -1.0f, -1.0f, // bottom-right of back
-
 
         // left
         -1.0f,  1.0f,  1.0f, // top-right of left
         -1.0f,  1.0f, -1.0f, // top-left of left
-
         -1.0f, -1.0f, -1.0f, // bottom-left of left
         -1.0f, -1.0f,  1.0f, // bottom-right of left
 
         // top
         1.0f,  1.0f, -1.0f, // top-right of top
         -1.0f,  1.0f, -1.0f, // top-left of top
-
         -1.0f,  1.0f,  1.0f, // bottom-left of top
         1.0f,  1.0f,  1.0f, // bottom-right of top
 
         // bottom
         1.0f, -1.0f,  1.0f, // top-right of bottom
         -1.0f, -1.0f,  1.0f, // top-left of bottom
-
         -1.0f, -1.0f, -1.0f, // bottom-left of bottom
         1.0f, -1.0f, -1.0f, // bottom-right of bottom
-        
     };
 
     float cube_color[] = {
         // front
-        1.0f, 0.0f, 0.0f, // top-right of front
-        1.0f, 0.0f, 0.0f, // top-left of front
+		1.0f, 0.0f, 0.0f, // top-right of front
+		1.0f, 0.0f, 0.0f, // top-left of front
+		1.0f, 0.0f, 0.0f, // bottom-left of front
+		1.0f, 0.0f, 0.0f, // bottom-right of front
 
-        1.0f, 0.0f, 0.0f, // bottom-left of front
-        1.0f, 0.0f, 0.0f, // bottom-right of front
+		// right
+		0.0f, 0.0f, 1.0f, // top-right of right
+		0.0f, 0.0f, 1.0f, // top-left of right
+		0.0f, 0.0f, 1.0f, // bottom-left of right
+		0.0f, 0.0f, 1.0f, // bottom-right of right
 
-        // right
-        0.0f, 0.0f, 1.0f, // top-right of right
-        0.0f, 0.0f, 1.0f, // top-left of right
+		// back
+		1.0f, 1.0f, 0.0f, // top-right of back
+		1.0f, 1.0f, 0.0f, // top-left of back
+		1.0f, 1.0f, 0.0f, // bottom-left of back
+		1.0f, 1.0f, 0.0f, // bottom-right of back
 
-        0.0f, 0.0f, 1.0f, // bottom-left of right
-        0.0f, 0.0f, 1.0f, // bottom-right of right
+		// left
+		1.0f, 0.0f, 1.0f, // top-right of left
+		1.0f, 0.0f, 1.0f, // top-left of left
+		1.0f, 0.0f, 1.0f, // bottom-left of left
+		1.0f, 0.0f, 1.0f, // bottom-right of left
 
-        // back
-        1.0f, 1.0f, 0.0f, // top-right of back
-        1.0f, 1.0f, 0.0f, // top-left of back
+		// top
+		0.0f, 1.0f, 0.0f, // top-right of top
+		0.0f, 1.0f, 0.0f, // top-left of top
+		0.0f, 1.0f, 0.0f, // bottom-left of top
+		0.0f, 1.0f, 0.0f, // bottom-right of top
 
-        1.0f, 1.0f, 0.0f, // bottom-left of back
-        1.0f, 1.0f, 0.0f, // bottom-right of back
-
-        // left
-        1.0f, 0.0f, 1.0f, // top-right of left
-        1.0f, 0.0f, 1.0f, // top-left of left
-
-        1.0f, 0.0f, 1.0f, // bottom-left of left
-        1.0f, 0.0f, 1.0f, // bottom-right of left
-
-        // top
-        0.0f, 1.0f, 0.0f, // top-right of top
-        0.0f, 1.0f, 0.0f, // top-left of top
-
-        0.0f, 1.0f, 0.0f, // bottom-left of top
-        0.0f, 1.0f, 0.0f, // bottom-right of top
-
-        // bottom
-        1.0f, 0.5f, 0.0f, // top-right of bottom
-        1.0f, 0.5f, 0.0f, // top-left of bottom
-
-        1.0f, 0.5f, 0.0f, // bottom-left of bottom
-        1.0f, 0.5f, 0.0f, // bottom-right of bottom
+		// bottom
+		1.0f, 0.5f, 0.0f, // top-right of bottom
+		1.0f, 0.5f, 0.0f, // top-left of bottom
+		1.0f, 0.5f, 0.0f, // bottom-left of bottom
+		1.0f, 0.5f, 0.0f, // bottom-right of bottom
     };
 
     // VertexData for Triangle Position
@@ -3845,7 +3830,12 @@ VkResult buildCommandBuffers(void) {
         );
 
         // Here we should call vulkan drawing functions!
-        vkCmdDraw(vkCommandBuffer_array[i], 24, 1, 0, 0);
+        vkCmdDraw(vkCommandBuffer_array[i], 4, 1, 0, 0);
+		vkCmdDraw(vkCommandBuffer_array[i], 4, 1, 4, 0);
+		vkCmdDraw(vkCommandBuffer_array[i], 4, 1, 8, 0);
+		vkCmdDraw(vkCommandBuffer_array[i], 4, 1, 12, 0);
+		vkCmdDraw(vkCommandBuffer_array[i], 4, 1, 16, 0);
+		vkCmdDraw(vkCommandBuffer_array[i], 4, 1, 20, 0);
 
         // End Render Pass
         vkCmdEndRenderPass(vkCommandBuffer_array[i]);
