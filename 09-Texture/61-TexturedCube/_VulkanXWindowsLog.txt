@@ -303,6 +303,12 @@ createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for {0}!.
 createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for {1}!.
 createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for {2}!.
 createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for {3}!.
+getSupportedDepthFormat(): Supported Depth Format Found: 130
+createSwapchainImagesAndImageViews(): getSupportedDepthFormat() Successful!.
+createSwapchainImagesAndImageViews(): vkCreateImage() Successful for Depth Image!.
+createSwapchainImagesAndImageViews(): vkAllocateMemory() Successful!.
+createSwapchainImagesAndImageViews(): vkBindDev() Successful!.
+createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for Depth Image!.
 initialize(): createSwapchainImagesAndImageViews() Successful!.
 
 createCommandPool(): vkCreateCommandPool() Successful!.
@@ -314,11 +320,49 @@ createCommandBuffers(): vkAllocateCommandBuffers() Successful for {2}!.
 createCommandBuffers(): vkAllocateCommandBuffers() Successful for {3}!.
 initialize(): createCommandBuffers() Successful!.
 
-createVertexBuffer(): vkCreateBuffer() Successful!.
-createVertexBuffer(): vkAllocateMemory() Successful!.
-createVertexBuffer(): vkBindBufferMemory() Successful!.
-createVertexBuffer(): vkMapMemory() Successful!.
+createVertexBuffer(): vkCreateBuffer() Successful for Position!.
+createVertexBuffer(): vkAllocateMemory() Successful for Position!.
+createVertexBuffer(): vkBindBufferMemory() Successful for Position!.
+createVertexBuffer(): vkMapMemory() Successful for Position!.
+
+createVertexBuffer(): vkCreateBuffer() Successful for TexCoord!.
+createVertexBuffer(): vkAllocateMemory() Successful for TexCoord!.
+createVertexBuffer(): vkBindBufferMemory() Successful for TexCoord!.
+createVertexBuffer(): vkMapMemory() Successful for TexCoord!.
 initialize(): createVertexBuffer() Successful!.
+
+createTexture(): Texture Image Loaded Successfully! Width: 256, Height: 256, Channels: 4, Size: 262144 bytes
+createTexture(): vkCreateBuffer() Successful for Staging Buffer!.
+createTexture(): vkAllocateMemory() Successful for Staging Buffer!.
+createTexture(): vkBindBufferMemory() Successful for Staging Buffer!.
+createTexture(): vkMapMemory() Successful for Staging Buffer!.
+createTexture(): Image Data Copied to Staging Buffer Successful & Freed stbi Image Data!.
+createTexture(): vkCreateImage() Successful for Texture Image!.
+createTexture(): vkAllocateMemory() Successful for Texture Image!.
+createTexture(): vkBindImageMemory() Successful for Texture Image!.
+createTexture(): vkAllocateCommandBuffers() Successful for Transition Image Layout!.
+createTexture(): vkBeginCommandBuffer() Successful for Transition Image Layout!.
+createTexture(): vkEndCommandBuffer() Successful for Transition Image Layout!.
+createTexture(): vkQueueSubmit() Successful for Transition Image Layout!.
+createTexture(): vkQueueWaitIdle() Successful for Transition Image Layout!.
+createTexture(): vkFreeCommandBuffers() Successful for Transition Image Layout!.
+createTexture(): vkAllocateCommandBuffers() Successful for Buffer to Image Copy!.
+createTexture(): vkBeginCommandBuffer() Successful for Buffer to Image Copy!.
+createTexture(): vkEndCommandBuffer() Successful for Buffer to Image Copy!.
+createTexture(): vkQueueSubmit() Successful for Buffer to Image Copy!.
+createTexture(): vkQueueWaitIdle() Successful for Buffer to Image Copy!.
+createTexture(): vkFreeCommandBuffers() Successful for Buffer to Image Copy!.
+createTexture(): vkAllocateCommandBuffers() Successful for Transition Image Layout for Shaders!.
+createTexture(): vkBeginCommandBuffer() Successful for Transition Image Layout for Shaders!.
+createTexture(): vkEndCommandBuffer() Successful for Transition Image Layout for Shaders!.
+createTexture(): vkQueueSubmit() Successful for Transition Image Layout for Shaders!.
+createTexture(): vkQueueWaitIdle() Successful for Transition Image Layout for Shaders!.
+createTexture(): vkFreeCommandBuffers() Successful for Transition Image Layout for Shaders!.
+createTexture(): vkFreeMemory() Successful for Staging Buffer!.
+createTexture(): vkDestroyBuffer() Successful for Staging Buffer!.
+createTexture(): vkCreateImageView() Successful for Texture Image!.
+createTexture(): vkCreateSampler() Successful for Texture Sampler!.
+initialize(): createTexture() Successful!.
 
 createUniformBuffer(): vkCreateBuffer() Successful!.
 createUniformBuffer(): vkAllocateMemory() Successful!.
@@ -408,6 +452,12 @@ createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for {0}!.
 createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for {1}!.
 createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for {2}!.
 createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for {3}!.
+getSupportedDepthFormat(): Supported Depth Format Found: 130
+createSwapchainImagesAndImageViews(): getSupportedDepthFormat() Successful!.
+createSwapchainImagesAndImageViews(): vkCreateImage() Successful for Depth Image!.
+createSwapchainImagesAndImageViews(): vkAllocateMemory() Successful!.
+createSwapchainImagesAndImageViews(): vkBindDev() Successful!.
+createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for Depth Image!.
 createRenderPass(): vkCreateRenderPass() Successful!.
 createPipelineLayout(): vkCreatePipelineLayout() Successful!.
 createPipeline(): vkCreatePipelineCache() Successful!.
@@ -453,51 +503,12 @@ createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for {0}!.
 createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for {1}!.
 createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for {2}!.
 createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for {3}!.
-createRenderPass(): vkCreateRenderPass() Successful!.
-createPipelineLayout(): vkCreatePipelineLayout() Successful!.
-createPipeline(): vkCreatePipelineCache() Successful!.
-createPipeline(): vkCreateGraphicsPipelines() Successful!.
-createFramebuffers(): vkCreateFramebuffer() Successful for {0}!.
-createFramebuffers(): vkCreateFramebuffer() Successful for {1}!.
-createFramebuffers(): vkCreateFramebuffer() Successful for {2}!.
-createFramebuffers(): vkCreateFramebuffer() Successful for {3}!.
-createCommandBuffers(): vkAllocateCommandBuffers() Successful for {0}!.
-createCommandBuffers(): vkAllocateCommandBuffers() Successful for {1}!.
-createCommandBuffers(): vkAllocateCommandBuffers() Successful for {2}!.
-createCommandBuffers(): vkAllocateCommandBuffers() Successful for {3}!.
-buildCommandBuffers(): vkResetCommandBuffer() Successful for {0}!.
-buildCommandBuffers(): vkBeginCommandBuffer() Successful for {0}!.
-buildCommandBuffers(): vkEndCommandBuffer() Successful for {0}!.
-buildCommandBuffers(): vkResetCommandBuffer() Successful for {1}!.
-buildCommandBuffers(): vkBeginCommandBuffer() Successful for {1}!.
-buildCommandBuffers(): vkEndCommandBuffer() Successful for {1}!.
-buildCommandBuffers(): vkResetCommandBuffer() Successful for {2}!.
-buildCommandBuffers(): vkBeginCommandBuffer() Successful for {2}!.
-buildCommandBuffers(): vkEndCommandBuffer() Successful for {2}!.
-buildCommandBuffers(): vkResetCommandBuffer() Successful for {3}!.
-buildCommandBuffers(): vkBeginCommandBuffer() Successful for {3}!.
-buildCommandBuffers(): vkEndCommandBuffer() Successful for {3}!.
-
-
-getPhysicalDeviceSurfaceFormatAndColorSpace(): vkGetPhysicalDeviceSurfaceFormatsKHR() first Call Successful!. [Found 2 Formats]
-getPhysicalDeviceSurfaceFormatAndColorSpace(): vkGetPhysicalDeviceSurfaceFormatsKHR() Second Call Successful!.
-getPhysicalDeviceSurfaceFormatAndColorSpace(): vkSurfaceFormatKHR_array freed.
-createSwapchain(): getPhysicalDeviceSurfaceFormatAndColorSpace() Successful!.
-createSwapchain(): vkGetPhysicalDeviceSurfaceCapabilitiesKHR() Successful!.
-createSwapchain(): desiredNumberOfSwapchainImages is : 3, [Min: 3, Max: 0]
-createSwapchain(): Swapchain Image Width : 800 X Height : 600
-getPhysicalDeviceSurfacePresentMode(): vkGetPhysicalDeviceSurfacePresentModesKHR() first Call Successful!. [Found 4 Present Modes]
-getPhysicalDeviceSurfacePresentMode(): vkGetPhysicalDeviceSurfacePresentModesKHR() Second Call Successful!.
-getPhysicalDeviceSurfacePresentMode(): VK_PRESENT_MODE_MAILBOX_KHR Present Mode found!.
-getPhysicalDeviceSurfacePresentMode(): vkPresentModeKHR_array freed.
-createSwapchain(): getPhysicalDeviceSurfacePresentMode() Successful!.
-createSwapchain(): vkCreateSwapchainKHR() Successful!.
-createSwapchainImagesAndImageViews(): vkGetSwapchainImagesKHR() Successful!. : Swapchain Image Count : [4]
-createSwapchainImagesAndImageViews(): vkGetSwapchainImagesKHR() Second Call Successful!.
-createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for {0}!.
-createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for {1}!.
-createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for {2}!.
-createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for {3}!.
+getSupportedDepthFormat(): Supported Depth Format Found: 130
+createSwapchainImagesAndImageViews(): getSupportedDepthFormat() Successful!.
+createSwapchainImagesAndImageViews(): vkCreateImage() Successful for Depth Image!.
+createSwapchainImagesAndImageViews(): vkAllocateMemory() Successful!.
+createSwapchainImagesAndImageViews(): vkBindDev() Successful!.
+createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for Depth Image!.
 createRenderPass(): vkCreateRenderPass() Successful!.
 createPipelineLayout(): vkCreatePipelineLayout() Successful!.
 createPipeline(): vkCreatePipelineCache() Successful!.
@@ -547,6 +558,11 @@ uninitialize(): vkDestroyShaderModule() Succeed for Fragment Shader!
 uninitialize(): vkDestroyShaderModule() Succeed for Vertex Shader!
 uninitialize(): vkFreeMemory() Succeed for Uniform Buffer!
 uninitialize(): vkDestroyBuffer() Succeed for Uniform Buffer!
+uninitialize(): vkDestroySampler() Succeed for Texture Sampler!
+uninitialize(): vkDestroyImageView() Succeed for Texture Image View!
+uninitialize(): vkFreeMemory() Succeed for Texture Image Memory!
+uninitialize(): vkDestroyImage() Succeed for Texture Image!
+uninitialize(): vkFreeMemory() Succeed for Vertex Buffer for TexCoord!
 uninitialize(): vkFreeMemory() Succeed for Vertex Buffer!
 uninitialize(): vkDestroyBuffer() Succeed for Vertex Buffer!
 uninitialize(): vkFreeCommandBuffers() Succeed for {0}
@@ -555,6 +571,9 @@ uninitialize(): vkFreeCommandBuffers() Succeed for {2}
 uninitialize(): vkFreeCommandBuffers() Succeed for {3}
 uninitialize(): freed vkCommandBuffer_array!.
 uninitialize(): vkDestroyCommandPool Successful!.
+uninitialize(): vkDestroyImageView() Succeed for Depth Stencil Image View!
+uninitialize(): vkDestroyImage() Succeed for Depth Stencil Image!
+uninitialize(): vkFreeMemory() Succeed for Depth Stencil Memory!
 uninitialize(): vkDestroyImageView() Succeed for {0}
 uninitialize(): vkDestroyImageView() Succeed for {1}
 uninitialize(): vkDestroyImageView() Succeed for {2}
@@ -562,6 +581,8 @@ uninitialize(): vkDestroyImageView() Succeed for {3}
 uninitialize(): freed swapchainImageView_array!.
 uninitialize(): freed swapchainImage_array!.
 uninitialize(): vkDestroySwapchainKHR() Succeed!
+AMK_VALIDATION: debugReportCallback() :  Validation (0) = Validation Error: [ VUID-vkDestroyDevice-device-05137 ] Object 0: handle = 0xdcc8fd0000000012, type = VK_OBJECT_TYPE_BUFFER; | MessageID = 0x4872eaa0 | vkDestroyDevice():  OBJ ERROR : For VkDevice 0x62ce8c67c210[], VkBuffer 0xdcc8fd0000000012[] has not been destroyed.
+The Vulkan spec states: All child objects created on device must have been destroyed prior to destroying device (https://vulkan.lunarg.com/doc/view/1.3.296.0/linux/1.3-extensions/vkspec.html#VUID-vkDestroyDevice-device-05137)
 uninitialize(): vkDestroyDevice() Succeed!
 uninitialize(): vkDestroySurfaceKHR() Succeed
 uninitialize(): vkDestroyDebugReportCallbackEXT_fnptr() Succeed
