@@ -314,15 +314,56 @@ createCommandBuffers(): vkAllocateCommandBuffers() Successful for {2}!.
 createCommandBuffers(): vkAllocateCommandBuffers() Successful for {3}!.
 initialize(): createCommandBuffers() Successful!.
 
-createVertexBuffer(): vkCreateBuffer() Successful!.
-createVertexBuffer(): vkAllocateMemory() Successful!.
-createVertexBuffer(): vkBindBufferMemory() Successful!.
-createVertexBuffer(): vkMapMemory() Successful!.
+createVertexBuffer(): vkCreateBuffer() Successful for Position!.
+createVertexBuffer(): vkAllocateMemory() Successful for Position!.
+createVertexBuffer(): vkBindBufferMemory() Successful for Position!.
+createVertexBuffer(): vkMapMemory() Successful for Position!.
+
+createVertexBuffer(): vkCreateBuffer() Successful for TexCoord!.
+createVertexBuffer(): vkAllocateMemory() Successful for TexCoord!.
+createVertexBuffer(): vkBindBufferMemory() Successful for TexCoord!.
+createVertexBuffer(): vkMapMemory() Successful for TexCoord!.
 initialize(): createVertexBuffer() Successful!.
 
-createUniformBuffer(): vkCreateBuffer() Successful!.
-createUniformBuffer(): vkAllocateMemory() Successful!.
-createUniformBuffer(): vkBindBufferMemory() Successful!.
+createTexture(): Texture Image Loaded Successfully! Width: 64, Height: 64, Size: 16384 bytes
+createTexture(): vkCreateBuffer() Successful for Staging Buffer!.
+createTexture(): vkAllocateMemory() Successful for Staging Buffer!.
+createTexture(): vkBindBufferMemory() Successful for Staging Buffer!.
+createTexture(): vkMapMemory() Successful for Staging Buffer!.
+createTexture(): Image Data Copied to Staging Buffer Successful!.
+createTexture(): vkCreateImage() Successful for Texture Image!.
+createTexture(): vkAllocateMemory() Successful for Texture Image!.
+createTexture(): vkBindImageMemory() Successful for Texture Image!.
+createTexture(): vkAllocateCommandBuffers() Successful for Transition Image Layout!.
+createTexture(): vkBeginCommandBuffer() Successful for Transition Image Layout!.
+createTexture(): vkEndCommandBuffer() Successful for Transition Image Layout!.
+createTexture(): vkQueueSubmit() Successful for Transition Image Layout!.
+createTexture(): vkQueueWaitIdle() Successful for Transition Image Layout!.
+createTexture(): vkFreeCommandBuffers() Successful for Transition Image Layout!.
+createTexture(): vkAllocateCommandBuffers() Successful for Buffer to Image Copy!.
+createTexture(): vkBeginCommandBuffer() Successful for Buffer to Image Copy!.
+createTexture(): vkEndCommandBuffer() Successful for Buffer to Image Copy!.
+createTexture(): vkQueueSubmit() Successful for Buffer to Image Copy!.
+createTexture(): vkQueueWaitIdle() Successful for Buffer to Image Copy!.
+createTexture(): vkFreeCommandBuffers() Successful for Buffer to Image Copy!.
+createTexture(): vkAllocateCommandBuffers() Successful for Transition Image Layout for Shaders!.
+createTexture(): vkBeginCommandBuffer() Successful for Transition Image Layout for Shaders!.
+createTexture(): vkEndCommandBuffer() Successful for Transition Image Layout for Shaders!.
+createTexture(): vkQueueSubmit() Successful for Transition Image Layout for Shaders!.
+createTexture(): vkQueueWaitIdle() Successful for Transition Image Layout for Shaders!.
+createTexture(): vkFreeCommandBuffers() Successful for Transition Image Layout for Shaders!.
+createTexture(): vkFreeMemory() Successful for Staging Buffer!.
+createTexture(): vkDestroyBuffer() Successful for Staging Buffer!.
+createTexture(): vkCreateImageView() Successful for Texture Image!.
+createTexture(): vkCreateSampler() Successful for Texture Sampler!.
+initialize(): createTexture() Successful!.
+
+createUniformBuffer(): vkCreateBuffer() Successful for Straight Uniform Buffer!.
+createUniformBuffer(): vkAllocateMemory() Successful for Straight Uniform Buffer!.
+createUniformBuffer(): vkBindBufferMemory() Successful for Straight Uniform Buffer!.
+createUniformBuffer(): vkCreateBuffer() Successful for Oblique Uniform Buffer!.
+createUniformBuffer(): vkAllocateMemory() Successful for Oblique Uniform Buffer!.
+createUniformBuffer(): vkBindBufferMemory() Successful for Oblique Uniform Buffer!.
 createUniformBuffer(): updateUniformBuffer() Successful!.
 initialize(): createUniformBuffer() Successful!.
 
@@ -345,8 +386,10 @@ initialize(): createPipelineLayout() Successful!.
 createDescriptorPool(): vkCreateDescriptorPool() Successful!.
 initialize(): createDescriptorPool() Successful!.
 
-createDescriptorSet(): vkAllocateDescriptorSets() Successful!.
-createDescriptorSet(): vkUpdateDescriptorSets() Successful!.
+createDescriptorSet(): vkAllocateDescriptorSets() Successful for straight descriptor set!.
+createDescriptorSet(): vkUpdateDescriptorSets() Successful for straight descriptor set!.
+createDescriptorSet(): vkAllocateDescriptorSets() Successful for oblique descriptor set!.
+createDescriptorSet(): vkUpdateDescriptorSets() Successful for oblique descriptor set!.
 initialize(): createDescriptorSet() Successful!.
 
 createRenderPass(): vkCreateRenderPass() Successful!.
@@ -479,51 +522,6 @@ buildCommandBuffers(): vkBeginCommandBuffer() Successful for {3}!.
 buildCommandBuffers(): vkEndCommandBuffer() Successful for {3}!.
 
 
-getPhysicalDeviceSurfaceFormatAndColorSpace(): vkGetPhysicalDeviceSurfaceFormatsKHR() first Call Successful!. [Found 2 Formats]
-getPhysicalDeviceSurfaceFormatAndColorSpace(): vkGetPhysicalDeviceSurfaceFormatsKHR() Second Call Successful!.
-getPhysicalDeviceSurfaceFormatAndColorSpace(): vkSurfaceFormatKHR_array freed.
-createSwapchain(): getPhysicalDeviceSurfaceFormatAndColorSpace() Successful!.
-createSwapchain(): vkGetPhysicalDeviceSurfaceCapabilitiesKHR() Successful!.
-createSwapchain(): desiredNumberOfSwapchainImages is : 3, [Min: 3, Max: 0]
-createSwapchain(): Swapchain Image Width : 800 X Height : 600
-getPhysicalDeviceSurfacePresentMode(): vkGetPhysicalDeviceSurfacePresentModesKHR() first Call Successful!. [Found 4 Present Modes]
-getPhysicalDeviceSurfacePresentMode(): vkGetPhysicalDeviceSurfacePresentModesKHR() Second Call Successful!.
-getPhysicalDeviceSurfacePresentMode(): VK_PRESENT_MODE_MAILBOX_KHR Present Mode found!.
-getPhysicalDeviceSurfacePresentMode(): vkPresentModeKHR_array freed.
-createSwapchain(): getPhysicalDeviceSurfacePresentMode() Successful!.
-createSwapchain(): vkCreateSwapchainKHR() Successful!.
-createSwapchainImagesAndImageViews(): vkGetSwapchainImagesKHR() Successful!. : Swapchain Image Count : [4]
-createSwapchainImagesAndImageViews(): vkGetSwapchainImagesKHR() Second Call Successful!.
-createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for {0}!.
-createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for {1}!.
-createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for {2}!.
-createSwapchainImagesAndImageViews(): vkCreateImageView() Successful for {3}!.
-createRenderPass(): vkCreateRenderPass() Successful!.
-createPipelineLayout(): vkCreatePipelineLayout() Successful!.
-createPipeline(): vkCreatePipelineCache() Successful!.
-createPipeline(): vkCreateGraphicsPipelines() Successful!.
-createFramebuffers(): vkCreateFramebuffer() Successful for {0}!.
-createFramebuffers(): vkCreateFramebuffer() Successful for {1}!.
-createFramebuffers(): vkCreateFramebuffer() Successful for {2}!.
-createFramebuffers(): vkCreateFramebuffer() Successful for {3}!.
-createCommandBuffers(): vkAllocateCommandBuffers() Successful for {0}!.
-createCommandBuffers(): vkAllocateCommandBuffers() Successful for {1}!.
-createCommandBuffers(): vkAllocateCommandBuffers() Successful for {2}!.
-createCommandBuffers(): vkAllocateCommandBuffers() Successful for {3}!.
-buildCommandBuffers(): vkResetCommandBuffer() Successful for {0}!.
-buildCommandBuffers(): vkBeginCommandBuffer() Successful for {0}!.
-buildCommandBuffers(): vkEndCommandBuffer() Successful for {0}!.
-buildCommandBuffers(): vkResetCommandBuffer() Successful for {1}!.
-buildCommandBuffers(): vkBeginCommandBuffer() Successful for {1}!.
-buildCommandBuffers(): vkEndCommandBuffer() Successful for {1}!.
-buildCommandBuffers(): vkResetCommandBuffer() Successful for {2}!.
-buildCommandBuffers(): vkBeginCommandBuffer() Successful for {2}!.
-buildCommandBuffers(): vkEndCommandBuffer() Successful for {2}!.
-buildCommandBuffers(): vkResetCommandBuffer() Successful for {3}!.
-buildCommandBuffers(): vkBeginCommandBuffer() Successful for {3}!.
-buildCommandBuffers(): vkEndCommandBuffer() Successful for {3}!.
-
-
 
 uninitialize(): vkDeviceWaitIdle is done!
 uninitialize(): vkDestroyFence() Succeed for {0}!.
@@ -545,10 +543,18 @@ uninitialize(): vkDestroyPipelineLayout() Succeed!
 uninitialize(): vkDestroyDescriptorSetLayout() Succeed!
 uninitialize(): vkDestroyShaderModule() Succeed for Fragment Shader!
 uninitialize(): vkDestroyShaderModule() Succeed for Vertex Shader!
-uninitialize(): vkFreeMemory() Succeed for Uniform Buffer!
-uninitialize(): vkDestroyBuffer() Succeed for Uniform Buffer!
-uninitialize(): vkFreeMemory() Succeed for Vertex Buffer!
-uninitialize(): vkDestroyBuffer() Succeed for Vertex Buffer!
+uninitialize(): vkFreeMemory() Succeed for Uniform Buffer for Oblique!
+uninitialize(): vkDestroyBuffer() Succeed for Uniform Buffer for Oblique!
+uninitialize(): vkFreeMemory() Succeed for Uniform Buffer for Straight!
+uninitialize(): vkDestroyBuffer() Succeed for Uniform Buffer for Straight!
+uninitialize(): vkDestroySampler() Succeed for Texture Sampler!
+uninitialize(): vkDestroyImageView() Succeed for Texture Image View!
+uninitialize(): vkFreeMemory() Succeed for Texture Image Memory!
+uninitialize(): vkDestroyImage() Succeed for Texture Image!
+uninitialize(): vkFreeMemory() Succeed for Vertex Buffer for TexCoord!
+uninitialize(): vkDestroyBuffer() Succeed for Vertex Buffer for TexCoord!
+uninitialize(): vkFreeMemory() Succeed for Vertex Buffer for Position!
+uninitialize(): vkDestroyBuffer() Succeed for Vertex Buffer for Position!
 uninitialize(): vkFreeCommandBuffers() Succeed for {0}
 uninitialize(): vkFreeCommandBuffers() Succeed for {1}
 uninitialize(): vkFreeCommandBuffers() Succeed for {2}
